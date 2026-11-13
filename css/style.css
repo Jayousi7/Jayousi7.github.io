@@ -132,10 +132,26 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 }
 .section-label h2 { margin: 0; }
 .about-layout {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
-.about-text { max-width: 900px; color: var(--muted); }
-.about-text + .about-text { margin-top: 18px; }
+.about-text {
+  max-width: none;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+.about-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent-light);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 .projects-grid { display: grid; }
 .project-row {
   display: grid;
@@ -204,11 +220,13 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
 @media (max-width: 760px) {
   .hero { min-height: auto; padding: 72px 0 88px; }
-  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid, .about-layout { grid-template-columns: 1fr; }
   .portrait-wrap { justify-self: start; width: min(100%, 320px); }
   .project-row { grid-template-columns: 32px 1fr; gap: 12px; }
   .project-row .text-link { grid-column: 2; margin-top: 14px; }
   .idea-layout { display: grid; grid-template-columns: 1fr; }
+  .about-layout { gap: 20px; }
+  .hero::before { right: -180px; opacity: 0.45; }
 }
 
 @media (max-width: 520px) {
@@ -217,6 +235,8 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
   .nav-links { gap: 12px; }
   .nav-links a { font-size: 0.78rem; }
   h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .hero { padding-top: 56px; }
+  .section { padding: 64px 0; }
   .site-footer { flex-direction: column; }
 }
 
