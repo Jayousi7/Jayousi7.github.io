@@ -108,13 +108,20 @@ h3 { font-size: 1.15rem; }
 .button:hover { background: var(--accent-light); border-color: var(--accent-light); transform: translateY(-2px); }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
-.portrait-wrap { justify-self: end; width: min(100%, 340px); }
+.portrait-wrap {
+  justify-self: end;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  padding: 5px;
+  background: var(--accent);
+  clip-path: polygon(25% 2%, 75% 2%, 100% 50%, 75% 98%, 25% 98%, 0 50%);
+}
 .avatar {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1.12;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  clip-path: polygon(25% 2%, 75% 2%, 100% 50%, 75% 98%, 25% 98%, 0 50%);
   filter: saturate(0.9);
 }
 
