@@ -19,10 +19,12 @@ const projects = [
 const projectsGrid = document.getElementById("projects-grid");
 
 projectsGrid.innerHTML = projects.map((project, index) => `
-  <article class="card">
+  <article class="project-row">
     <span class="card-number">${String(index + 1).padStart(2, "0")}</span>
-    <h3>${project.title}</h3>
-    <p>${project.description}</p>
+    <div class="project-info">
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+    </div>
     <a href="${project.link}" class="text-link">View on GitHub ↗</a>
   </article>
 `).join("");
