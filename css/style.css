@@ -35,7 +35,9 @@ button { font: inherit; }
 .window-title, .section-title { border-bottom: 1px solid var(--line); color: var(--honey-light); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; }
 .window-title { display: flex; justify-content: space-between; padding: 13px 18px; }
 .window-coordinates { color: var(--muted); font-weight: 400; }
-.profile-layout { display: grid; grid-template-columns: 280px 1fr; gap: 54px; align-items: center; padding: 66px 54px; }
+.profile-layout { display: grid; grid-template-columns: 1fr 280px; gap: 54px; align-items: center; padding: 66px 54px; }
+.profile-copy { grid-column: 1; grid-row: 1; }
+.player-panel { grid-column: 2; grid-row: 1; }
 .panel-label { margin-bottom: 12px; color: var(--muted); font-size: 0.7rem; }
 .slot { display: grid; place-items: center; border: 2px solid #554331; background: var(--slot); color: var(--honey-light); cursor: pointer; box-shadow: inset 0 0 0 2px #0a0907; }
 .slot:hover, .slot:focus-visible, .slot.is-selected { border-color: var(--honey); outline: none; }
