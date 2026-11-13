@@ -132,12 +132,9 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 }
 .section-label h2 { margin: 0; }
 .about-layout {
-  display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
-  gap: clamp(40px, 10vw, 140px);
+  display: block;
 }
-.about-layout h2 { margin-bottom: 0; }
-.about-text { max-width: 62ch; color: var(--muted); }
+.about-text { max-width: 900px; color: var(--muted); }
 .about-text + .about-text { margin-top: 18px; }
 .projects-grid { display: grid; }
 .project-row {
@@ -207,7 +204,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
 @media (max-width: 760px) {
   .hero { min-height: auto; padding: 72px 0 88px; }
-  .hero-grid, .about-layout { grid-template-columns: 1fr; }
+  .hero-grid { grid-template-columns: 1fr; }
   .portrait-wrap { justify-self: start; width: min(100%, 320px); }
   .project-row { grid-template-columns: 32px 1fr; gap: 12px; }
   .project-row .text-link { grid-column: 2; margin-top: 14px; }
