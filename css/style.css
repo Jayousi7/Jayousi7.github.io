@@ -103,7 +103,9 @@ h1 { max-width: 600px; margin-top: 10px; color: var(--text); font-size: clamp(3r
 @media (max-width: 430px) {
   .window-title { flex-direction: column; gap: 4px; }
   h1 { font-size: 3.5rem; }
-  .profile-layout { grid-template-columns: minmax(0, 1fr) 100px; gap: 14px; padding-inline: 16px; }
-  .player-frame { width: 100px; }
-  .profile-actions { align-items: flex-start; flex-direction: column; gap: 15px; }
+  .profile-layout { grid-template-columns: minmax(0, 1fr) 90px; gap: 10px; padding-inline: 16px; }
+  .player-frame { width: 90px; }
+  .profile-actions { align-items: center; flex-direction: row; flex-wrap: nowrap; gap: 8px; }
+  .pixel-button { padding: 9px 10px; font-size: 0.62rem; }
+  .pixel-link { font-size: 0.62rem; }
 }
