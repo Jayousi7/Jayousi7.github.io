@@ -221,7 +221,8 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 760px) {
   .hero { min-height: auto; padding: 72px 0 88px; }
   .hero-grid, .about-layout { grid-template-columns: 1fr; }
-  .portrait-wrap { justify-self: start; width: min(100%, 320px); }
+  .portrait-wrap { justify-self: start; width: min(100%, 240px); }
+  .avatar { aspect-ratio: 1; }
   .project-row { grid-template-columns: 32px 1fr; gap: 12px; }
   .project-row .text-link { grid-column: 2; margin-top: 14px; }
   .idea-layout { display: grid; grid-template-columns: 1fr; }
@@ -237,6 +238,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
   h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
   .hero { padding-top: 56px; }
   .section { padding: 64px 0; }
+  .portrait-wrap { width: 190px; }
   .site-footer { flex-direction: column; }
 }
 
