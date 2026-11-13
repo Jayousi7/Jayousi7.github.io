@@ -3,97 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ahmad Aljayyousi, AI student and Junior AI Engineer working on computer vision, NLP, and LLM systems.">
-  <title>Ahmad Aljayyousi | AI Engineer</title>
+  <meta name="description" content="Ahmad Aljayyousi — AI Engineer portfolio.">
+  <title>Ahmad's Inventory | AI Engineer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a href="#hero" class="logo">Ahmad Aljayyousi</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <main class="inventory-shell">
+    <header class="topbar">
+      <a href="#profile" class="brand">AHMAD'S INVENTORY</a>
+      <span class="status">● ONLINE / AI ENGINEER</span>
+    </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">AI ENGINEER · AMMAN, JORDAN</p>
+    <section class="inventory-window" id="profile">
+      <div class="window-title">
+        <span>PROFILE</span>
+        <span class="window-coordinates">AMMAN, JORDAN</span>
+      </div>
+
+      <div class="profile-layout">
+        <aside class="player-panel">
+          <div class="player-card">
+            <div class="player-frame">
+              <img src="images/me.jpeg" alt="Ahmad Aljayyousi" class="player-photo">
+              <span class="armor-shine"></span>
+            </div>
+            <span class="level">LVL 21 · BUILDING</span>
+          </div>
+        </aside>
+
+        <div class="profile-copy">
+          <span class="kicker">[ ABOUT ME ]</span>
           <h1>Hi, I'm Ahmad.</h1>
-          <p class="hero-copy">I build computer vision and Arabic NLP systems that move from research to production.</p>
-          <div class="hero-links">
-            <a href="#projects" class="button">Selected work</a>
-            <a href="mailto:a.jayousi91@gmail.com" class="text-link">Get in touch ↗</a>
+          <p class="role">AI Engineer / Computer Vision / Arabic NLP</p>
+          <p class="intro">I build computer vision and Arabic NLP systems that move from research to production.</p>
+          <div class="profile-actions">
+            <a class="pixel-button" href="#projects">OPEN PROJECTS</a>
+            <a class="pixel-link" href="mailto:a.jayousi91@gmail.com">SEND MESSAGE ↗</a>
           </div>
         </div>
-        <div class="portrait-wrap">
-          <img src="images/me.jpeg" alt="Ahmad Aljayyousi wearing a colorful poncho and sombrero" class="avatar">
-        </div>
       </div>
+
+      <section class="inventory-section" id="about">
+        <div class="section-title"><span>01</span> ABOUT</div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="item-icon">📖</span>
+            <div><h2>Education</h2><p>B.Sc. Artificial Intelligence at JUST. GPA 4.17/4.2, graduating January 2027.</p></div>
+          </article>
+          <article class="stat-card">
+            <span class="item-icon">⚙</span>
+            <div><h2>Experience</h2><p>Junior AI Engineer at Madar Aero, working on aerial analysis and autonomous systems.</p></div>
+          </article>
+          <article class="stat-card">
+            <span class="item-icon">⌁</span>
+            <div><h2>Research</h2><p>Multimodal learning, efficient deployment, Arabic language models, and useful AI systems.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="inventory-section" id="projects">
+        <div class="section-title"><span>02</span> HOTBAR / SELECTED WORK</div>
+        <div class="hotbar">
+          <button class="slot hotbar-slot is-selected" type="button" data-project="0" aria-label="Tactical Aerial Surveillance">⚔<small>01</small></button>
+          <button class="slot hotbar-slot" type="button" data-project="1" aria-label="Arabic Hate Speech Detection">⛏<small>02</small></button>
+          <button class="slot hotbar-slot" type="button" data-project="2" aria-label="Arabic Sentiment Analysis">📜<small>03</small></button>
+        </div>
+        <article class="project-display" id="project-display"></article>
+      </section>
+
+      <section class="inventory-section contact-section" id="contact">
+        <div class="section-title"><span>03</span> EXIT MESSAGE</div>
+        <div class="contact-row">
+          <div>
+            <h2>Have a good problem?</h2>
+            <p>Let's make it useful. Send an idea, challenge, or messy dataset my way.</p>
+          </div>
+          <a class="pixel-button" href="mailto:a.jayousi91@gmail.com">TELL ME ABOUT IT ↗</a>
+        </div>
+      </section>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-label"><span>01</span><h2>About</h2></div>
-        <div class="about-layout">
-          <p class="about-text">
-            I'm a B.Sc. Artificial Intelligence student at Jordan University of Science and
-            Technology, graduating in January 2027 with a 4.17/4.2 GPA. I work part-time
-            as a Junior AI Engineer at Madar Aero.
-          </p>
-          <p class="about-text">
-            My work focuses on real-time computer vision, Arabic NLP, and taking trained
-            models into reliable APIs with ONNX Runtime, FastAPI, and Docker.
-          </p>
-          <p class="about-text">
-            <span class="about-label">Research interests</span>
-            I'm interested in multimodal learning, efficient model deployment, Arabic
-            language models, and AI systems that connect research with real-world use.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-label"><span>02</span><h2>Selected work</h2></div>
-        <div class="projects-grid" id="projects-grid">
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container idea-layout">
-        <div>
-          <div class="section-label"><span>03</span><h2>Contact</h2></div>
-          <p class="eyebrow">Have a good problem?</p>
-          <h3 class="idea-title">Let's make it useful.</h3>
-        </div>
-        <div class="idea-content">
-          <p>Have an idea, challenge, or messy dataset worth exploring? Send it my way.</p>
-          <a class="button" href="mailto:a.jayousi91@gmail.com">Tell me about it ↗</a>
-        </div>
-      </div>
-    </section>
-
+    <footer class="footer">AHMAD ALJAYYOUSI <span>© 2026 / KEEP BUILDING</span></footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Ahmad Aljayyousi</p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/Jayousi7">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="mailto:a.jayousi91@gmail.com">Email</a></li>
-      </ul>
-    </div>
-  </footer>
-
   <script src="js/script.js"></script>
 </body>
 </html>
