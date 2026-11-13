@@ -58,11 +58,23 @@ h1 { max-width: 600px; margin-top: 10px; color: var(--text); font-size: clamp(3r
 .section-title span { color: var(--muted); }
 .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 22px; border: 1px solid var(--line); background: var(--line); }
 .stat-card { display: flex; gap: 14px; min-height: 150px; padding: 20px; background: var(--panel); }
-.item-icon { color: var(--honey); font-size: 1.4rem; }
+.item-icon {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 30px;
+  border: 1px solid var(--honey);
+  color: var(--honey-light);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
 .stat-card h2 { font-size: 1.2rem; }
 .stat-card p, .contact-row p { margin: 10px 0 0; color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.84rem; }
 .hotbar { display: flex; gap: 8px; margin: 22px 0 18px; }
-.hotbar-slot { position: relative; width: 64px; height: 64px; font-size: 1.6rem; }
+.hotbar-slot { position: relative; width: 64px; height: 64px; }
+.hotbar-icon { color: var(--honey-light); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; }
 .hotbar-slot small { position: absolute; right: 5px; bottom: 1px; color: var(--muted); font-size: 0.65rem; }
 .project-display { min-height: 148px; padding: 22px; border: 1px solid var(--line); background: var(--panel); }
 .project-display h2 { font-size: 1.55rem; }
@@ -75,8 +87,9 @@ h1 { max-width: 600px; margin-top: 10px; color: var(--text); font-size: clamp(3r
 @media (max-width: 720px) {
   .inventory-shell { width: min(100% - 20px, 1050px); padding-top: 16px; }
   .topbar { flex-direction: column; gap: 6px; }
-  .profile-layout { grid-template-columns: 1fr; gap: 38px; padding: 42px 22px; }
-  .player-panel { justify-self: start; }
+  .profile-layout { grid-template-columns: minmax(0, 1fr) 135px; gap: 20px; padding: 42px 22px; align-items: start; }
+  .player-panel { grid-column: 2; grid-row: 1; justify-self: end; }
+  .profile-copy { grid-column: 1; grid-row: 1; }
   .player-card { margin-top: 0; }
   .player-frame { width: 135px; }
   .stats-grid { grid-template-columns: 1fr; }
@@ -88,5 +101,7 @@ h1 { max-width: 600px; margin-top: 10px; color: var(--text); font-size: clamp(3r
 @media (max-width: 430px) {
   .window-title { flex-direction: column; gap: 4px; }
   h1 { font-size: 3.5rem; }
+  .profile-layout { grid-template-columns: minmax(0, 1fr) 100px; gap: 14px; padding-inline: 16px; }
+  .player-frame { width: 100px; }
   .profile-actions { align-items: flex-start; flex-direction: column; gap: 15px; }
 }
