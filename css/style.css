@@ -100,7 +100,15 @@ h1 { max-width: 600px; margin-top: 10px; color: var(--text); font-size: clamp(3r
   .stats-grid { grid-template-columns: 1fr; }
   .inventory-section { padding: 30px 22px 34px; }
   .contact-row { align-items: flex-start; flex-direction: column; }
-  .footer { align-items: flex-start; flex-direction: column; }
+  .footer {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
+  .footer-links { gap: 10px; }
 }
 
 @media (max-width: 430px) {
@@ -111,4 +119,7 @@ h1 { max-width: 600px; margin-top: 10px; color: var(--text); font-size: clamp(3r
   .profile-actions { align-items: center; flex-direction: row; flex-wrap: nowrap; gap: 8px; }
   .pixel-button { padding: 9px 10px; font-size: 0.62rem; }
   .pixel-link { font-size: 0.62rem; }
+  .footer { gap: 7px; font-size: 0.52rem; }
+  .footer-links { gap: 7px; }
+  .footer-links a { font-size: 0.52rem; }
 }
