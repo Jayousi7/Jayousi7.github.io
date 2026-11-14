@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Arabic Hate Speech Span Detection",
     description: "A MARBERT MRC system for Arabic toxic-span detection, reaching 73.3% F1 across a 3,632-comment dataset.",
-    link: "https://github.com/Jayousi7",
+    link: "https://github.com/Jayousi7/AHSSD",
   },
   {
     title: "Arabic Sentiment Analysis",
